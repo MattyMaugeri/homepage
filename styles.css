@@ -1,28 +1,98 @@
-*{
+:root {
+    --margin: 100px;
+}
+
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
 body {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100;
 }
 
-body > div {
+h1,
+h2 {
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+}
+
+body>div {
     border: 2px solid grey;
-    flex: 1;
 }
 
 .header {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 60px var(--margin);
+
 }
 
 .header-content {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.header-image-container {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.header-image-container img {
+    max-width: 400px;
+}
+
+.header-image-container h2 {
+    width: 100%;
+    position: absolute;
+    transform: translate(-50%, 0);
+    left: 50%;
+    bottom: 5px;
+}
+
+.header-bio-container {
+    border: 2px solid grey;
+    padding: 30px;
+}
+
+.about-me-title {
+    font-size: 2.4rem;
+    font-weight: 500;
+    padding: 0 0 20px 0;
+}
+
+.header-bio-text {
+    font-size: 1.5rem;
+}
+
+.header-bio-icon-container {
+    display: flex;
+    gap: 8px;
+    justify-content: end;
+    margin-top: 40px;
+}
+
+.header-bio-icon-container i {
+    font-size: 1.6rem;
+}
+
+/* Tablet Query */
+@media (min-width: 600px) and (max-width: 1200px) {
+    body {
+        color: blueviolet;
+    }
+
+    
+
 }
