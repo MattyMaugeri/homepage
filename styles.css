@@ -1,5 +1,6 @@
 :root {
-    --margin: 100px;
+    --desktop-margin: 100px;
+    --tablet-margin: 65px
 }
 
 * {
@@ -33,7 +34,7 @@ body>div {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 60px var(--margin);
+    margin: 60px var(--desktop-margin);
 
 }
 
@@ -54,11 +55,12 @@ body>div {
 }
 
 .header-image-container h2 {
-    width: 100%;
     position: absolute;
     transform: translate(-50%, 0);
     left: 50%;
     bottom: 5px;
+    font-size: 2rem;
+    width: 100%;
 }
 
 .header-bio-container {
@@ -66,7 +68,7 @@ body>div {
     padding: 30px;
 }
 
-.about-me-title {
+.header-bio-container h2 {
     font-size: 2.4rem;
     font-weight: 500;
     padding: 0 0 20px 0;
@@ -93,6 +95,30 @@ body>div {
         color: blueviolet;
     }
 
-    
+    .header {
+        margin: var(--tablet-margin);
+    }
+
+    .header-content {
+        display: block;
+    }
+
+    .header-image-container {
+        float: left;
+        margin: 0 -25px -34px 0;
+        transform: translate(-15%, -10%);
+
+    }
+
+    .header-image-container img {
+        height: 350px;
+        width: 250px;
+    }
+
+    .header-image-container h2 {
+        width: 100%;
+        font-size: 1.6rem;
+        bottom: 15px;
+    }
 
 }
