@@ -1,8 +1,8 @@
 :root {
-    --desktop-margin: 65px;
+    --desktop-margin: 165px;
     --tablet-margin: 65px;
     --mobile-margin: 40px;
-    --background-theme: red;
+    --background-theme: #beb49e;
 }
 
 * {
@@ -18,7 +18,6 @@ body {
     font-style: normal;
     font-variation-settings:
         "wdth" 100;
-    margin: 100px;
 }
 
 h1,
@@ -35,13 +34,14 @@ h2 {
     line-height: 30px;
 }
 
+
 /* #region HEADER STYLES */
 
 .header {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0 var(--desktop-margin) 0 var(--desktop-margin);
+    margin: 100px var(--desktop-margin) 0 var(--desktop-margin);
 
 }
 
@@ -107,6 +107,7 @@ h2 {
 
 /* #endregion */
 
+
 /* #region MAIN STYLES */
 
 .main {
@@ -138,6 +139,38 @@ h2 {
 
 /* #endregion */
 
+
+/* #region FOOTER STYLES */
+
+.footer {
+    display: flex;
+    padding: 60px var(--desktop-margin) 60px var(--desktop-margin);
+    justify-content: space-between;
+    background-color: var(--background-theme);
+}
+
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.contact-container h2 {
+    margin-bottom: 20px;
+    align-self: flex-start;
+}
+
+.contact-details {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+
+
+/* #endregion */
 
 
 /* #region QUERIES */
@@ -182,6 +215,11 @@ h2 {
     .projects-container {
         grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
     }
+
+    .footer {
+        padding: 60px var(--tablet-margin) 60px var(--tablet-margin);
+    }
+
 
 }
 
@@ -236,6 +274,18 @@ h2 {
 
     .projects-container {
         grid-template-columns: repeat(auto-fit, minmax(265px, 1fr));
+    }
+
+    .contact-container {
+        margin: 50px var(--mobile-margin);
+    }
+
+    .contact-container div:last-child {
+        margin-top: 20px;
+    }
+
+    .footer {
+        padding: 0;
     }
 
 }
