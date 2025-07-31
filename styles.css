@@ -1,5 +1,5 @@
 :root {
-    --desktop-margin: 165px;
+    --desktop-margin: 135px;
     --tablet-margin: 65px;
     --mobile-margin: 40px;
     --background-theme: #beb49e;
@@ -42,7 +42,6 @@ h2 {
     justify-content: center;
     align-items: center;
     margin: 100px var(--desktop-margin) 0 var(--desktop-margin);
-
 }
 
 .header-background {
@@ -131,10 +130,27 @@ h2 {
     flex-direction: column;
 }
 
+.project>* {
+    flex: 1;
+}
+
+.project-image {
+    flex-basis: 70%;
+}
+
+.project-description {
+    flex-basis: 30%;
+    padding: 14px 10px 0 10px;
+}
 
 .project-nav {
     display: flex;
     justify-content: space-between;
+    font-size: 1.5rem;
+}
+
+.project-text {
+    margin-top: 12px;
 }
 
 /* #endregion */
@@ -147,6 +163,7 @@ h2 {
     padding: 60px var(--desktop-margin) 60px var(--desktop-margin);
     justify-content: space-between;
     background-color: var(--background-theme);
+    gap: 40px;
 }
 
 .contact-container {
@@ -167,8 +184,6 @@ h2 {
     flex-direction: column;
     gap: 20px;
 }
-
-
 
 /* #endregion */
 
@@ -220,6 +235,9 @@ h2 {
         padding: 60px var(--tablet-margin) 60px var(--tablet-margin);
     }
 
+    .footer-image {
+        max-width: 280px;
+    }
 
 }
 
@@ -277,7 +295,7 @@ h2 {
     }
 
     .contact-container {
-        margin: 50px var(--mobile-margin);
+        padding: 50px var(--mobile-margin);
     }
 
     .contact-container div:last-child {
@@ -286,6 +304,13 @@ h2 {
 
     .footer {
         padding: 0;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .footer-image {
+        max-width: 100%;
     }
 
 }
